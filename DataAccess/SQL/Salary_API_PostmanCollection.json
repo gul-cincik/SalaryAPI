@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "2ffba949-07cd-4a99-8fd0-b82c23ba895a",
+		"name": "SetCaseAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21574053"
+	},
+	"item": [
+		{
+			"name": "AddEmployeeType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"value\": 3,\r\n  \"baseSalary\": true,\r\n  \"overtime\": true,\r\n  \"daily\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/employee/AddEmployeeType"
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tc\": \"58756985742\",\r\n  \"firstName\": \"Ayşe\",\r\n  \"lastName\": \"Solmaz\",\r\n  \"email\": \"asolmaz@gmail.com\",\r\n  \"employeeTypeId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/employee/AddEmployee"
+			},
+			"response": []
+		},
+		{
+			"name": "AddSalaryDetailsToEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"baseSalary\": 32000,\r\n  \"dailyWage\": 0,\r\n  \"hourlyWage\": 500,\r\n  \"employeeId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/salary/AddSalaryDetailsToEmployee"
+			},
+			"response": []
+		},
+		{
+			"name": "PostSalaryDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"baseSalary\": 27000,\r\n  \"dailyWage\": 0,\r\n  \"hourlyWage\": 0,\r\n  \"employeeId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/salary/PostSalaryDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "AddPayrollToEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"daysWorked\": 0,\r\n  \"hoursWorked\": 10,\r\n  \"totalSalary\": 0,\r\n  \"payDate\": \"2024-01-27T16:27:17.487Z\",\r\n  \"employeeId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/salary/AddPayrollToEmployee"
+			},
+			"response": []
+		},
+		{
+			"name": "GetSalaryDetailsByEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"employeeId\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/salary/GetSalaryDetailsByEmployee"
+			},
+			"response": []
+		},
+		{
+			"name": "GetOvertimeSalaryRange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"minBaseSalary\": 25000.00,\r\n  \"maxBaseSalary\": 35000.00,\r\n  \"minTotalSalary\": 30000.00,\r\n  \"maxTotalSalary\": 45000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7067/salary/GetOvertimeSalaryRange"
+			},
+			"response": []
+		}
+	]
+}
